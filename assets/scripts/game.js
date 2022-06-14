@@ -17,6 +17,6 @@ class Game {
   }
 
   getJogadaCPU() {
-    return jogadas[Math.floor(Math.random() * 3)];
+    return this.jogadas[Math.floor(Math.random() * 3)];
   }
 }
