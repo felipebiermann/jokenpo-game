@@ -1,4 +1,13 @@
 body {
   background-color: #ccc;
   font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
