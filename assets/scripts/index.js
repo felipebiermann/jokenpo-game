@@ -1,6 +1,6 @@
 //fazer os botões de cada opção e as comparações - RESOLVIDO.
 //capturar as imagens -
-//fazer a resposta aparecer na tela
+//fazer a resposta aparecer na tela - RESOLVIDO
 //adicionar placar
 //adicionar animação
 //rodadas limite
@@ -15,8 +15,10 @@ const gameBoard = document.getElementById("game-board");
 const clickEvent = document.getElementById("clickEvent");
 let choicePlayer;
 let choiceCPU;
-let imgPlayer = "./assets/images/${choicePlayer}.png";
-let imgCPU = "./assets/images/${choiceCPU}.png";
+let scorePlayer = 0;
+let scoreCPU = 0;
+// let imgPlayer = `./assets/images/${choicePlayer}.png`;
+// let imgCPU = "./assets/images/${choiceCPU}.png";
 
 const game = new Game(gameBoard);
 
@@ -51,43 +53,60 @@ clickEvent.addEventListener("click", (event) => {
 
 pedraBtn.addEventListener("click", (event) => {
   choicePlayer = event.srcElement.innerText;
-  playerimg.setAttribute("src", imgPlayer);
+
+  playerimg.setAttribute("src", `./assets/images/${choicePlayer}.png`);
   choiceCPU = game.getJogadaCPU();
-  cpuimg.setAttribute("src", imgCPU);
-  console.log("o player escolheu" + choicePlayer);
-  console.log("o CPU escolheu" + choiceCPU);
+  cpuimg.setAttribute("src", `./assets/images/${choiceCPU}.png`);
+  console.log("o player escolheu " + choicePlayer);
+  console.log("o CPU escolheu " + choiceCPU);
   if (choicePlayer === "pedra" && choiceCPU === "pedra") {
     console.log("Empate!");
   } else if (choicePlayer === "pedra" && choiceCPU === "tesoura") {
+    scorePlayer++;
+    placarPlayer.innerText = scorePlayer;
     console.log("Você Venceu!");
   } else if (choicePlayer === "pedra" && choiceCPU === "papel") {
+    scoreCPU++;
+    placarCPU.innerText = scoreCPU;
     console.log("Você Perdeu!");
   }
 });
 
 tesouraBtn.addEventListener("click", (event) => {
   choicePlayer = event.srcElement.innerText;
+  playerimg.setAttribute("src", `./assets/images/${choicePlayer}.png`);
   choiceCPU = game.getJogadaCPU();
+  cpuimg.setAttribute("src", `./assets/images/${choiceCPU}.png`);
 
-  console.log("o player escolheu" + choicePlayer);
-  console.log("o CPU escolheu" + choiceCPU);
+  console.log("o player escolheu " + choicePlayer);
+  console.log("o CPU escolheu " + choiceCPU);
   if (choicePlayer === "tesoura" && choiceCPU === "pedra") {
+    scoreCPU++;
+    placarCPU.innerText = scoreCPU;
     console.log("Você Perdeu!");
   } else if (choicePlayer === "tesoura" && choiceCPU === "tesoura") {
     console.log("Empate!");
   } else if (choicePlayer === "tesoura" && choiceCPU === "papel") {
+    scorePlayer++;
+    placarPlayer.innerText = scorePlayer;
     console.log("Você Venceu!");
   }
 });
 
 papelBtn.addEventListener("click", (event) => {
   choicePlayer = event.srcElement.innerText;
+  playerimg.setAttribute("src", `./assets/images/${choicePlayer}.png`);
   choiceCPU = game.getJogadaCPU();
-  console.log("o player escolheu" + choicePlayer);
-  console.log("o CPU escolheu" + choiceCPU);
+  cpuimg.setAttribute("src", `./assets/images/${choiceCPU}.png`);
+  console.log("o player escolheu " + choicePlayer);
+  console.log("o CPU escolheu " + choiceCPU);
   if (choicePlayer === "papel" && choiceCPU === "pedra") {
+    scorePlayer++;
+    placarPlayer.innerText = scorePlayer;
     console.log("Você Venceu!");
   } else if (choicePlayer === "papel" && choiceCPU === "tesoura") {
+    scoreCPU++;
+    placarCPU.innerText = scoreCPU;
     console.log("Você Perdeu!");
   } else if (choicePlayer === "papel" && choiceCPU === "papel") {
     console.log("Empate!");
