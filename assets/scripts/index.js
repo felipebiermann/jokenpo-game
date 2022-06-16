@@ -2,8 +2,8 @@
 //capturar as imagens - RESOLVIDO
 //fazer a resposta aparecer na tela - RESOLVIDO
 //adicionar placar - RESOLVIDO
-//adicionar animação
-//rodadas limite
+//adicionar animação(botão e estilizar a pagina)
+//rodadas limite - RESOLVIDO
 
 const campoPlayer = document.getElementById("player");
 const campoCPU = document.getElementById("cpu");
