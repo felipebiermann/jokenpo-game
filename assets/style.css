@@ -4,6 +4,14 @@ body {
   text-align: center;
 }
 
+#player {
+  background-color: rgb(255, 27, 0);
+}
+
+#cpu {
+  background-color: rgb(255, 27, 0);
+}
+
 .placarBonito {
   border: solid black;
   width: 33px;
@@ -53,6 +61,7 @@ h1 {
   font-family: Trebuchet MS, sans-serif;
   font-size: 50px;
   text-align: center;
+  background-color: rgb(255, 27, 0);
 }
 
 h1 span {
@@ -83,13 +92,29 @@ h1:hover span {
 
 /* Aplica un delay para crear el efecto "paso a paso" en lugar de mostrar todo de golpe" */
 
+.u {
+  color: rgb(253, 253, 253);
+}
+
+.un {
+  color: rgb(253, 253, 255);
+}
+
+.uni {
+  color: rgb(255, 255, 255);
+}
+
+.unit {
+  color: rgb(255, 255, 255);
+}
+
 .unit {
   transition-delay: 0.48s;
-  color: rgb(255, 27, 0);
+  color: rgb(33, 102, 250);
 }
 .unite {
   transition-delay: 0.64s;
-  color: rgb(255, 27, 0);
+  color: rgb(33, 102, 250);
 }
 .united {
   transition-delay: 0.8s;
@@ -108,12 +133,15 @@ h1:hover span {
 }
 .united-natio {
   transition-delay: 1.6s;
+  color: white;
 }
 .united-nation {
   transition-delay: 1.76s;
+  color: white;
 }
 .united-nations {
   transition-delay: 1.92s;
+  color: white;
 }
 
 #pedraBtn,
