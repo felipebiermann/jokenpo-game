@@ -49,10 +49,76 @@ yellow: #FFB037;
 
 #player {
   background-color: rgb(255, 27, 0);
+
+  height: 4vh;
+  background: linear-gradient(
+    135deg,
+    #fa6501,
+    #ff1c1c,
+    #fd5f5f,
+    #9c2121,
+    #f1e1c2
+  );
+  background-size: 400% 400%;
+  animation: bg_gradient 10s infinite ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "JetBrains Mono", monospace;
+
+  color: #3f2f4f;
+  user-select: none;
+}
+
+@keyframes bg_gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #cpu {
   background-color: rgb(255, 27, 0);
+
+  height: 4vh;
+  background: linear-gradient(
+    135deg,
+    #fa6501,
+    #ff1c1c,
+    #fd5f5f,
+    #9c2121,
+    #f1e1c2
+  );
+  background-size: 400% 400%;
+  animation: bg_gradient 10s infinite ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "JetBrains Mono", monospace;
+
+  color: #3f2f4f;
+  user-select: none;
+}
+
+@keyframes bg_gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .placarBonito {
@@ -63,7 +129,7 @@ yellow: #FFB037;
   box-shadow: 5px 5px 10px -1px black;
   position: absolute;
   left: 56.9%;
-  top: 42%;
+  top: 43%;
   margin-left: -110px;
   margin-top: -40px;
 }
@@ -76,7 +142,7 @@ yellow: #FFB037;
   box-shadow: 5px 5px 10px -1px black;
   position: absolute;
   left: 56.9%;
-  top: 99%;
+  top: 96.3%;
   margin-left: -110px;
   margin-top: -40px;
 }
@@ -97,7 +163,7 @@ yellow: #FFB037;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 55px;
+  margin-top: 40px;
 }
 
 h1 {
